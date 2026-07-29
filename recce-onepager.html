@@ -1,0 +1,398 @@
+<!--
+  RECCE — Legal & Support one-pager
+  ------------------------------------------------------------------
+  PLATFORM-NEUTRAL. Works for iOS App Store + Google Play + any future site.
+  Refers only to "the App" / "the Software" — never a specific store.
+
+  BEFORE YOU PUBLISH — replace every [BRACKETED] placeholder and then
+  DELETE the amber DRAFT banner near the top of the <body>.
+
+  The Terms section is a STARTER DRAFT written in plain language so a
+  lawyer can turn it into final wording quickly. It is NOT legal advice.
+  Have a lawyer review the Terms before you rely on them across SA / US / EU.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TOM'S APP — Privacy, Terms &amp; Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:      #0d0e10;
+    --panel:      #16181b;
+    --panel-edge: #24272c;
+    --chrome:     #9aa0a6;
+    --chrome-dim: #6b7075;
+    --ink:        #e8e9eb;
+    --ink-soft:   #b9bcc0;
+    --amber:      #f5a623;
+    --amber-deep: #c8801a;
+    --amber-glow: rgba(245,166,35,.28);
+    --draft:      #ff5a3c;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(120% 80% at 50% -10%, #191b1e 0%, var(--black) 60%) fixed;
+    color:var(--ink);
+    font-family:"Atkinson Hyperlegible", system-ui, sans-serif;
+    font-size:18px;            /* generous base for legibility */
+    line-height:1.72;          /* airy line-height, dyslexia-friendly */
+    letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px 120px;
+  }
+
+  /* ---- eyebrow "readout" label: the signature glow ---- */
+  .eyebrow{
+    font-family:"Oswald", sans-serif;
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:.34em;
+    font-size:.72rem;
+    color:var(--amber);
+    text-shadow:0 0 14px var(--amber-glow);
+    margin:0 0 14px;
+    display:inline-block;
+  }
+
+  h1,h2,h3{
+    font-family:"Oswald", sans-serif;
+    font-weight:400;
+    letter-spacing:.01em;
+    line-height:1.12;
+    color:var(--ink);
+    margin:0 0 .5em;
+  }
+
+  /* ---------- header / faceplate ---------- */
+  header{
+    padding:88px 0 56px;
+    border-bottom:1px solid var(--panel-edge);
+    margin-bottom:8px;
+  }
+  .mark{
+    font-family:"Oswald", sans-serif;
+    font-weight:600;
+    font-size:clamp(3rem, 12vw, 5.4rem);
+    letter-spacing:.02em;
+    line-height:1;
+    margin:0;
+    background:linear-gradient(180deg,#f4f5f6 0%, #b7bcc1 52%, #7c8288 53%, #d7dade 100%);
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 1px 0 rgba(0,0,0,.6));
+  }
+  .tagline{
+    font-family:"Oswald", sans-serif;
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-size:.85rem;
+    color:var(--chrome);
+    margin:14px 0 26px;
+  }
+  .lede{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    max-width:56ch;
+    margin:0;
+  }
+  .chips{ margin-top:30px; display:flex; flex-wrap:wrap; gap:10px; }
+  .chip{
+    font-family:"Oswald",sans-serif;
+    text-transform:uppercase; letter-spacing:.16em; font-size:.66rem;
+    color:var(--chrome);
+    border:1px solid var(--panel-edge);
+    border-radius:2px;
+    padding:7px 12px;
+    background:var(--panel);
+  }
+  .chip b{ color:var(--amber); font-weight:500; }
+
+  /* ---------- draft banner (DELETE before publishing) ---------- */
+  .draft-banner{
+    border:1px solid var(--draft);
+    background:rgba(255,90,60,.08);
+    color:#ffb4a4;
+    border-radius:3px;
+    padding:16px 20px;
+    margin:32px 0 0;
+    font-size:.95rem;
+    line-height:1.55;
+  }
+  .draft-banner strong{ color:var(--draft); font-family:"Oswald",sans-serif; letter-spacing:.06em; }
+
+  /* ---------- sections ---------- */
+  section{ padding:56px 0; border-bottom:1px solid var(--panel-edge); }
+  section h2{ font-size:clamp(1.7rem,5vw,2.3rem); }
+  section p{ margin:0 0 1.15em; color:var(--ink-soft); }
+  section p:last-child{ margin-bottom:0; }
+  strong{ color:var(--ink); font-weight:700; }
+  a{ color:var(--amber); text-decoration:none; border-bottom:1px solid var(--amber-deep); }
+  a:hover{ color:#ffc45f; border-bottom-color:var(--amber); }
+  a:focus-visible{ outline:2px solid var(--amber); outline-offset:3px; border-radius:2px; }
+
+  /* the "Data Not Collected" readout */
+  .readout{
+    margin:8px 0 30px;
+    padding:26px 28px;
+    background:var(--panel);
+    border:1px solid var(--panel-edge);
+    border-left:3px solid var(--amber);
+    border-radius:3px;
+  }
+  .readout .big{
+    font-family:"Oswald",sans-serif;
+    font-weight:500;
+    font-size:clamp(1.5rem,5vw,2rem);
+    color:var(--amber);
+    text-shadow:0 0 22px var(--amber-glow);
+    text-transform:uppercase; letter-spacing:.05em;
+    line-height:1.1; margin:0 0 6px;
+  }
+  .readout .sub{ color:var(--ink-soft); margin:0; font-size:1rem; }
+
+  ul.plain{ list-style:none; padding:0; margin:0 0 1.15em; }
+  ul.plain li{
+    position:relative; padding-left:26px; margin-bottom:.8em; color:var(--ink-soft);
+  }
+  ul.plain li::before{
+    content:""; position:absolute; left:0; top:.62em;
+    width:9px; height:9px; border:1px solid var(--amber-deep);
+    background:var(--amber); box-shadow:0 0 8px var(--amber-glow);
+  }
+
+  /* FAQ */
+  .faq{ margin-top:8px; }
+  details{
+    border:1px solid var(--panel-edge);
+    border-radius:3px;
+    background:var(--panel);
+    margin-bottom:12px;
+    overflow:hidden;
+  }
+  details[open]{ border-color:var(--amber-deep); }
+  summary{
+    cursor:pointer; list-style:none;
+    padding:18px 22px;
+    font-family:"Oswald",sans-serif; font-weight:400; font-size:1.12rem;
+    color:var(--ink);
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary:focus-visible{ outline:2px solid var(--amber); outline-offset:-2px; }
+  summary .plus{ color:var(--amber); font-family:"Oswald",sans-serif; font-weight:300; font-size:1.5rem; line-height:1; transition:transform .2s ease; }
+  @media (prefers-reduced-motion: reduce){ summary .plus{ transition:none; } }
+  details[open] summary .plus{ transform:rotate(45deg); }
+  .faq-body{ padding:0 22px 22px; color:var(--ink-soft); font-size:1rem; }
+  .faq-body p{ margin:0; }
+
+  /* contact */
+  .contact-actions{ display:flex; flex-wrap:wrap; gap:14px; margin-top:26px; }
+  .btn{
+    font-family:"Oswald",sans-serif; text-transform:uppercase; letter-spacing:.14em;
+    font-size:.82rem; font-weight:500;
+    padding:15px 26px; border-radius:3px; border:1px solid var(--amber-deep);
+    color:var(--black); background:linear-gradient(180deg,#f7b53f,#e0921c);
+    text-decoration:none; box-shadow:0 0 22px var(--amber-glow);
+  }
+  .btn.ghost{
+    color:var(--amber); background:transparent; border:1px solid var(--panel-edge); box-shadow:none;
+  }
+  .btn:hover{ filter:brightness(1.06); }
+  .btn:focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
+
+  footer{ padding:48px 0 0; color:var(--chrome-dim); font-size:.85rem; }
+  footer .meta{ font-family:"Oswald",sans-serif; text-transform:uppercase; letter-spacing:.16em; font-size:.68rem; color:var(--chrome-dim); }
+
+  @media (max-width:520px){
+    body{ font-size:17px; }
+    header{ padding:60px 0 44px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ DELETE THIS BANNER BEFORE PUBLISHING ============ -->
+  <div class="draft-banner">
+    <strong>DRAFT — NOT YET LIVE.</strong> Replace every [bracketed] placeholder,
+    have a lawyer review the Terms section, then delete this banner. The Terms below
+    are a plain-language starting point, not final legal wording.
+  </div>
+  <!-- ============================================================== -->
+
+  <header>
+    <p class="mark">TOM'S APP</p>
+    <p class="tagline">A location scout's instrument</p>
+    <p class="lede">Sun Path, Director's Viewfinder and Light Meter in one tool —
+      built for cinematographers, designed to work entirely on your device, with nothing sent anywhere.</p>
+    <div class="chips">
+      <span class="chip"><b>Offline</b> &nbsp;by design</span>
+      <span class="chip"><b>No account</b> &nbsp;needed</span>
+      <span class="chip"><b>No data</b> &nbsp;collected</span>
+    </div>
+  </header>
+
+  <!-- ================= PRIVACY ================= -->
+  <section id="privacy">
+    <span class="eyebrow">01 — Privacy</span>
+    <h2>What happens to your data</h2>
+
+    <div class="readout">
+      <p class="big">Data Not Collected</p>
+      <p class="sub">TOM'S APP has no servers and no accounts. Everything the app does happens on your device.</p>
+    </div>
+
+    <p>TOM'S APP is a measuring instrument, not an online service. It doesn't ask you to sign in,
+      it doesn't create a profile, and it never sends your information to us or to anyone else.
+      We — the developers — receive nothing, because there is nothing sent.</p>
+
+    <p><strong>What the app uses on your device, and why:</strong></p>
+    <ul class="plain">
+      <li><strong>Camera</strong> — to show the live viewfinder and overlays, and to save your reference photos. Frames are processed on the device and are never transmitted.</li>
+      <li><strong>Location (GPS)</strong> — to calculate the sun's position for your exact spot. Your coordinates stay on the device and are used only for that calculation.</li>
+      <li><strong>Photos</strong> — to save the images you capture into your own photo library. The app writes to your library; it does not read, upload, or share it.</li>
+      <li><strong>Motion sensors</strong> — to read the phone's tilt and orientation so the horizon and sun arc line up with the real world.</li>
+    </ul>
+
+    <p><strong>A note on photos and location metadata.</strong> Reference photos you capture may
+      include the GPS location where you took them, saved inside the image file (EXIF), because
+      knowing the spot is the point of a scout. Once you share a photo — by AirDrop, WhatsApp,
+      email, or backing it up to a cloud drive — that location travels with it, and what happens
+      to it is then governed by whichever service you used, not by TOM'S APP.
+      [If you add a "remove location from saved photos" toggle, describe it here.]</p>
+
+    <p>TOM'S APP contains no analytics, no advertising, no trackers, and no third-party code.
+      Because we collect nothing, there is nothing for us to sell, share, lose, or hand over.</p>
+
+    <p><em>Questions about privacy? Email <a href="mailto:tommarais1@gmail.com">tommarais1@gmail.com</a>.</em></p>
+  </section>
+
+  <!-- ================= TERMS ================= -->
+  <section id="terms">
+    <span class="eyebrow">02 — Terms of Use</span>
+    <h2>The agreement, in plain language</h2>
+
+    <p>By using TOM'S APP ("the App"), you agree to the terms below. If you don't agree, please don't
+      use the App. These terms apply however you obtained the App and on whatever device you run it.</p>
+
+    <p><strong>TOM'S APP is a reference tool.</strong> It gives you estimates — sun position, framing,
+      light readings — to help you plan. Like any instrument, it can be affected by your device's
+      sensors, calibration, surroundings, and conditions on the day. <strong>Always confirm
+      anything critical independently before you commit a shoot, a build, or a budget to it.</strong>
+      TOM'S APP is an aid to your judgement, not a replacement for it.</p>
+
+    <p><strong>Provided "as is."</strong> The App is provided as is and as available, without
+      warranties of any kind, whether express or implied, including fitness for a particular
+      purpose and accuracy. We don't promise the App will be error-free or that every reading
+      will be exact.</p>
+
+    <p><strong>Limitation of liability.</strong> To the fullest extent allowed by law, the
+      developers are not liable for any loss or damage — including lost time, lost production
+      days, lost money, or other indirect or consequential loss — arising from your use of, or
+      inability to use, the App or anything you decided based on it. [Lawyer: insert jurisdiction-
+      appropriate liability cap and carve-outs here.]</p>
+
+    <p><strong>Your responsibilities.</strong> Use the App lawfully, respect any rules of the
+      locations you scout, and don't attempt to reverse-engineer, resell, or redistribute the App
+      except as the law allows.</p>
+
+    <p><strong>Licence.</strong> You're granted a personal, non-transferable licence to use the
+      App on devices you own or control. The App and its design remain the property of the
+      developers.</p>
+
+    <p><strong>Changes.</strong> We may update these terms as the App evolves. The current version
+      always lives on this page, with the date shown at the foot.</p>
+
+    <p><strong>Governing law.</strong> These terms are governed by the laws of South Africa.
+      [Lawyer: confirm and add dispute-resolution wording.]</p>
+
+    <p><em>This section is a plain-language starting point for your lawyer to finalise. It is not
+      itself legal advice.</em></p>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <span class="eyebrow">03 — FAQ</span>
+    <h2>When it looks broken but isn't</h2>
+    <p>TOM'S APP is an instrument, so some of its honest behaviour can look like a fault. The common ones:</p>
+
+    <div class="faq">
+      <details>
+        <summary>The sun arc won't show up indoors <span class="plus">+</span></summary>
+        <div class="faq-body"><p>Sun Path needs a GPS fix, and GPS struggles inside buildings.
+          Step near a window or outside and give it a moment to lock on. No signal means no
+          calculation — the app waits rather than guessing.</p></div>
+      </details>
+      <details>
+        <summary>The compass heading drifts or feels wrong <span class="plus">+</span></summary>
+        <div class="faq-body"><p>Phone compasses are thrown off by steel, cars, rebar, and
+          street canyons — exactly the environments you scout in. Use the <strong>tap-the-sun</strong>
+          calibration: point at the real sun and tap it, and TOM'S APP re-aligns itself in one move.</p></div>
+      </details>
+      <details>
+        <summary>Why did it save a second, blank-looking photo? <span class="plus">+</span></summary>
+        <div class="faq-body"><p>That's the RAW capture — a clean, unmarked exposure plate saved
+          alongside your annotated reference. It isn't blank; it just has no overlays drawn on it,
+          so you keep a pristine original. [Adjust if you add a RAW on/off toggle.]</p></div>
+      </details>
+      <details>
+        <summary>Do I need to sign in or make an account? <span class="plus">+</span></summary>
+        <div class="faq-body"><p>No. TOM'S APP works entirely on your device. There's nothing to log
+          into and nothing stored on a server — you pick it up and it works, like a light meter.</p></div>
+      </details>
+      <details>
+        <summary>Does it work without internet? <span class="plus">+</span></summary>
+        <div class="faq-body"><p>Yes — that's the whole idea. TOM'S APP needs no connection to do its
+          job. GPS and the sun calculations work offline, wherever you are.</p></div>
+      </details>
+      <details>
+        <summary>Why is the app locked to landscape? <span class="plus">+</span></summary>
+        <div class="faq-body"><p>Because you frame in landscape. TOM'S APP is built around the way a
+          camera is held, so the viewfinder, arc, and readouts stay where your eye expects them.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact">
+    <span class="eyebrow">04 — Contact</span>
+    <h2>Reach the developer</h2>
+    <p>TOM'S APP is made by Tom Marais in South Africa. There's no call centre —
+      just a real person reading a real inbox. Email is the fastest way to reach us, and when
+      you write in, telling us your app version and device helps us help you quickly.</p>
+
+    <div class="contact-actions">
+      <a class="btn" href="mailto:tommarais1@gmail.com?subject=TOM%27S%20APP%20Support">Email support</a>
+      <a class="btn ghost" href="mailto:tommarais1@gmail.com?subject=TOM%27S%20APP%20Suggestion">Send a suggestion</a>
+    </div>
+
+    <p style="margin-top:28px;"><em>Tip for the app itself: wire both buttons to the same
+      <code>mailto:</code> hand-off you'll use in the Settings panel, pre-filling the subject and
+      the app version + device model. No server required.</em></p>
+  </section>
+
+  <footer>
+    <p class="meta">TOM'S APP — Privacy, Terms &amp; Support</p>
+    <p>Last updated July 2026. &nbsp;© 2026 Tom Marais. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
